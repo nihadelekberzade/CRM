@@ -1,0 +1,116 @@
+.navbar {
+  width: 26rem;
+  min-height: calc(100vh - 56px);
+  background: rgb(85, 85, 85);
+  transition: transform 0.5s;
+  transform: translateX(-260px);
+}
+.navbar--active {
+  transform: translateX(0);
+}
+.navbar__content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  padding: 2rem;
+  white-space: nowrap;
+  border-bottom: 1px solid #3a3f48;
+}
+.profile__id {
+  font-weight: 700;
+}
+.profile__username {
+  color: #ccc;
+}
+.navbar__profile-photo {
+  width: 56px;
+  height: 58px;
+  border-radius: 4px;
+}
+.menu__title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0 10px 20px;
+  letter-spacing: 0.5px;
+}
+.link {
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 400;
+}
+.link--active .link__user-icon {
+  animation: shake;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes shake {
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.link__user-icon {
+  transform-origin: top;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: #666;
+  margin-right: 10px;
+}
+.link .dropdown-menu {
+  height: 0;
+  transition: height 0.5s ease;
+  background: #666;
+}
+.link .dropdown-list {
+  padding: 3px 0;
+}
+.link .dropdown-item {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 8px 0;
+  cursor: pointer;
+  padding: 8px 20px;
+  opacity: 0.7;
+}
+.link .dropdown-item:hover {
+  opacity: 1;
+}
+.link .bars {
+  width: 15px;
+  height: 15px;
+}
+.link__opener {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 20px;
+  opacity: 0.7;
+}
+.link__opener:hover {
+  opacity: 1;
+}
+.link--active .link__opener {
+  opacity: 1;
+}
+.link--active .link__arrow {
+  transform: rotate(90deg);
+}
+.link__arrow {
+  transition: transform 0.5s ease;
+  margin-left: auto;
+  width: 12px;
+  height: 24px;
+}

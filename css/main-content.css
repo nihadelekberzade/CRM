@@ -1,0 +1,13 @@
+.main {
+  margin: 3rem;
+  transition: margin 0.5s;
+  color: #000;
+}
+.main--fullsize {
+  margin-left: -24rem;
+}
+.main__card-list .card {
+  width: 200px;
+  height: 400px;
+  background: teal;
+}
